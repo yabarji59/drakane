@@ -1,0 +1,136 @@
+/* Fond général */
+body {
+  background: #eaeaea;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Barre de navigation */
+nav {
+  background: #b3b3b3;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px;
+  border-radius: 3px;
+}
+
+nav .nav-btns {
+  display: flex;
+  gap: 20px;
+}
+
+nav .nav-btns button {
+  background: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 24px;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+nav .nav-title {
+  text-align: center;
+  flex: 1;
+}
+
+nav .nav-title h1 {
+  margin: 0;
+  font-size: 2em;
+  font-weight: 500;
+  text-align: center;
+
+
+}
+
+nav .nav-title p {
+  margin: 0;
+  font-size: 1em;
+}
+
+/* Zone principale */
+.main-content {
+  background: #a4c2e0;
+  margin: 16px auto;
+  border-radius: 8px;
+  padding: 40px 0 0 0;
+  min-height: 80vh;
+  max-width: 1200px; /* Ajouté */
+}
+
+.recherche-titre {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.recherche-zone {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.recherche-input {
+  background: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 2em;
+  padding: 10px 40px;
+  width: 60%;
+  text-align: center;
+  font-weight: 400;
+  box-shadow: 0 2px 8px #0001;
+}
+
+/* Grille des boutons */
+.problemes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+  gap: 40px 60px;
+  margin: 60px auto 40px auto; /* Ajoute de l'espace au-dessus */
+  max-width: 1000px; /* Centre et limite la largeur */
+}
+
+/* Boutons de problème */
+.probleme-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #d1dbe6;
+  border: none;
+  border-radius: 40px;
+  padding: 18px 38px;
+  font-size: 1.2em;
+  cursor: pointer;
+  min-width: 220px;
+  box-shadow: 0 2px 8px #0001;
+  transition: background 0.2s;
+}
+
+.probleme-btn:hover {
+  background: #b3c6de;
+}
+
+.probleme-btn img, .probleme-btn svg {
+  width: 70px;
+  height: 48px;
+  object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .problemes-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 90vw;
+  }
+  .main-content {
+    padding: 20px 0 0 0;
+  }
+  .recherche-input {
+    width: 90%;
+    font-size: 1.2em;
+  }
+}
